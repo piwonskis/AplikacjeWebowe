@@ -1,0 +1,43 @@
+*{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    margin: 0;
+    width: 100%;
+}
+header{
+    width: 100%;
+    background-color: teal;
+}
+p{
+    width: 600px;
+}
+main{
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    height: 85vh;
+    width: 100%;
+}
+img{
+    width: 200px;
+}
+div{
+    flex-direction: row;
+}
+table{
+    border-collapse: collapse;
+    border: 1px solid teal;
+    flex-direction: column;
+}
+tr{
+
+}
+input{
+    color: black;
+}
