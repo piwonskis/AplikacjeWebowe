@@ -1,0 +1,41 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Wpis {
+  id           Int         @id @default(autoincrement())
+  kategoria    Kategoria   @relation(fields: [id_kategorii], references: [id])
+  id_kategorii Int
+  tytul        String
+  tworca       String      @db.VarChar(40)
+  zawartosc    String
+  data         DateTime    @default(now())
+  komentarzs   Komentarz[]
+}
+
+model Kategoria {
+  id             Int    @id @default(autoincrement())
+  nazwa          String
+  opis_kategorii String
+  wpis           Wpis[]
+}
+
+model Komentarz {
+  id         Int    @id @default(autoincrement())
+  wpis       Wpis   @relation(fields: [id_wpisu], references: [id])
+  id_wpisu   Int
+  uzytkownik String @db.VarChar(40)
+  tekst      String
+}
