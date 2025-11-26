@@ -1,0 +1,31 @@
+{
+  "name": "express-starter-cjs",
+  "version": "1.0.0",
+  "description": "Starter repository for **ZSK students** — a lightweight, ready-to-use Express.js setup using CommonJS modules.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "inspect": "nodemon --inspect index.js",
+    "format": "prettier --write .",
+    "lint": "eslint . ",
+    "lint:fix": "eslint . --fix "
+  },
+  "private": true,
+  "dependencies": {
+    "@prisma/client": "^6.19.0",
+    "body-parser": "^2.2.1",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.38.0",
+    "@eslint/json": "^0.13.2",
+    "eslint": "^9.38.0",
+    "globals": "^16.4.0",
+    "nodemon": "^3.1.10",
+    "prettier": "^3.6.2",
+    "prisma": "^7.0.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
