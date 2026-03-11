@@ -1,0 +1,43 @@
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+}
+
+.content {
+  flex: 1;
+  padding-top: 1rem;
+  width: 100%;
+}
+
+.post-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  h1 {
+    color: #646cff;
+    text-align: center;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .post-page {
+    padding: 1rem;
+  }
+}
